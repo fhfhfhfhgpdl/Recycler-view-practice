@@ -10,15 +10,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val list = ArrayList<DataList>()
-        list.add(DataList(R.drawable.dimigologo, "Dimi", "010-xxxx-xxxx"))
-        list.add(DataList(R.drawable.dimigologo, "EB", "010-xxxx-xxxx"))
-        list.add(DataList(R.drawable.dimigologo, "DC", "010-xxxx-xxxx"))
-        list.add(DataList(R.drawable.dimigologo, "WP", "010-xxxx-xxxx"))
-        list.add(DataList(R.drawable.dimigologo, "HD", "010-xxxx-xxxx"))
-        list.add(DataList(R.drawable.dimigologo, "20th", "010-xxxx-xxxx"))
-        list.add(DataList(R.drawable.dimigologo, "Dimigo", "010-xxxx-xxxx"))
-        list.add(DataList(R.drawable.dimigologo, "aaaaa", "010-xxxx-xxxx"))
+        val list = listOf(
+            DataList(R.drawable.dimigologo, "Dimi", "010-xxxx-xxxx"),
+            DataList(R.drawable.dimigologo, "EB", "010-xxxx-xxxx"),
+            DataList(R.drawable.dimigologo, "DC", "010-xxxx-xxxx"),
+            DataList(R.drawable.dimigologo, "WP", "010-xxxx-xxxx"),
+            DataList(R.drawable.dimigologo, "HD", "010-xxxx-xxxx"),
+            DataList(R.drawable.dimigologo, "20th", "010-xxxx-xxxx"),
+            DataList(R.drawable.dimigologo, "Dimigo", "010-xxxx-xxxx"),
+            DataList(R.drawable.dimigologo, "aaaaa", "010-xxxx-xxxx")
+        )
+
 
 
         val adapter = RecyclerAdapter(list)

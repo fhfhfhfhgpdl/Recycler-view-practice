@@ -1,18 +1,14 @@
 package com.example.recyclerviewpractice
 
 import android.view.LayoutInflater
-import android.view.OrientationEventListener
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.TextView
 import android.widget.Toast
-import androidx.appcompat.view.menu.ActionMenuItemView
-import androidx.appcompat.view.menu.MenuView
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.item.view.*
 
-class RecyclerAdapter(private val items: ArrayList<DataList>) : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
+class RecyclerAdapter(private val items: List<DataList>) : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
 
     override fun getItemCount(): Int = items.size
 
@@ -35,7 +31,7 @@ class RecyclerAdapter(private val items: ArrayList<DataList>) : RecyclerView.Ada
     class ViewHolder(v: View) : RecyclerView.ViewHolder(v) {
         private var view: View = v
         fun bind(listener: View.OnClickListener, item: DataList) {
-            view.Image1.setImageDrawable(item.imgProfile)
+            (view.Image1 as ImageView).setImageResource(R.drawable.dimigologo)
             view.txt_name1.text = item.strName
             view.phone_number1.text = item.strPhoneNo
             view.setOnClickListener(listener)
@@ -45,6 +41,3 @@ class RecyclerAdapter(private val items: ArrayList<DataList>) : RecyclerView.Ada
 
 }
 
-private fun ImageView.setImageDrawable(imgProfile: Int) {
-
-}       //함수 내용이 아무것도 없는데 왜 실행이 정상적으로? 제가 생각했던데로 되는지 모르겠습니다 help...
